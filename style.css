@@ -1,0 +1,96 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background:url(https://plus.unsplash.com/premium_photo-1671411322577-afc1d5cc93bf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1267);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+/* Navbar styling */
+ul.navbar {
+    list-style-type: none;
+    background-color:rgb(8, 179, 247);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.navbar li {
+    position: relative;  /* needed for dropdown positioning */
+    padding: 15px 25px;
+    color:black;
+    cursor: pointer;
+}
+
+ul.navbar li:hover {
+    background-color:rgb(249, 160, 175);
+}
+
+/* Dropdown container */
+.dropdown {
+    display: none; /* hidden by default */
+    position: absolute;
+    top: 100%; /* appear below parent li */
+    left: 0;
+    background-color: rgb(8, 179, 247);;
+    min-width: 200px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Dropdown list items */
+.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown ul li {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.dropdown ul li:hover {
+    background-color: rgb(249, 160, 175);
+}
+
+/* Show dropdown on hover */
+ul.navbar li:hover .dropdown {
+    display: block;
+}
+/* Submenu container */
+.dropdown1 {
+    display: none; /* hidden by default */
+    position: absolute;
+    top: 0;       /* aligned with parent li */
+    left: 100%;   /* appears to the right of parent dropdown li */
+    background-color:rgb(8, 179, 247);;
+    min-width: 200px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Show submenu on hover */
+.dropdown ul li:hover .dropdown1 {
+    display: block;
+}
+
+/* Submenu items styling */
+.dropdown1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown1 ul li {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.dropdown1 ul li:hover {
+    background-color: rgb(249, 160, 175);
+}
